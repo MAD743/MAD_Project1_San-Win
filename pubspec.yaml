@@ -55,6 +55,12 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+<<<<<<< HEAD
+=======
+  assets:
+    - assets/croissant.jpg
+    - assets/sandwich.jpg
+>>>>>>> origin/main
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -90,4 +96,8 @@ flutter:
   #         weight: 700
   #
   # For details regarding fonts from package dependencies,
+<<<<<<< HEAD
   # see https://flutter.dev/to/font-from-package
+=======
+  # see https://flutter.dev/to/font-from-package
+>>>>>>> origin/main

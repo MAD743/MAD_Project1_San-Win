@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 
 void main() {
   runApp(const MyApp());
@@ -120,6 +121,28 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+=======
+import 'package:provider/provider.dart';
+import 'providers/recipe_provider.dart';
+import 'screens/home_screen.dart';
+
+void main() {
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => RecipeProvider(),
+      child: MyApp(),
+    ),
+  );
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Recipe Planner',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: HomeScreen(),
+>>>>>>> origin/main
     );
   }
 }

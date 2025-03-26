@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 # meal_plan_app
 
 A Flutter project for Mobile App Development of 2025 Spring, Group 23 (San Yi and Win Nguyen). 
 An app project allows user to view the recipes and nutritions of various foods from breakfast, lunch, and dinner.
+=======
+# test_flutter_app
+
+A new Flutter project.
+>>>>>>> origin/main
 
 ## Getting Started
 
