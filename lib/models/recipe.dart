@@ -4,6 +4,7 @@ class Recipe {
   final String imageUrl;
   final String description;
   final List<String> ingredients;
+  bool isLiked;
 
   Recipe({
     required this.title,
@@ -11,9 +12,9 @@ class Recipe {
     required this.imageUrl,
     required this.description,
     required this.ingredients,
+    this.isLiked = false,
   });
 
-  // Convert recipe to Map for local storage
   Map<String, dynamic> toMap() {
     return {
       'title': title,
@@ -24,7 +25,6 @@ class Recipe {
     };
   }
 
-  // Convert Map back to Recipe object
   factory Recipe.fromMap(Map<String, dynamic> map) {
     return Recipe(
       title: map['title'],

@@ -11,7 +11,7 @@ class RecipeProvider with ChangeNotifier {
       ingredients: ['Flour', 'Butter', 'Yeast', 'Sugar', 'Milk'],
     ),
     Recipe(
-      title: 'Ham Sandwich',
+      title: 'Sandwich',
       category: 'Breakfast',
       imageUrl: 'assets/sandwich.jpg',
       description: 'A classic sandwich with fresh ingredients.',
@@ -21,7 +21,7 @@ class RecipeProvider with ChangeNotifier {
       title: 'Pancakes',
       category: 'Breakfast',
       imageUrl: 'assets/pancakes.jpg',
-      description: 'Fluffy homemade pancakes..',
+      description: 'A fluffy homemade pancake.',
       ingredients: ['Flour', 'Eggs', 'Milk', 'Baking powder'],
     ),
     Recipe(
@@ -35,8 +35,8 @@ class RecipeProvider with ChangeNotifier {
       title: 'Beef Stew',
       category: 'Lunch',
       imageUrl: 'assets/beef_stew.jpg',
-      description: 'A classic sandwich with fresh ingredients.',
-      ingredients: ['Bread', 'Ham', 'Lettuce', 'Tomato', 'Cheese'],
+      description: 'Hearty beef stew with vegetables and herbs.',
+      ingredients: ['Beef', 'Potatoes', 'Carrots', 'Onions', 'Thyme'],
     ),
     Recipe(
       title: 'Pepperoni Pizza',
@@ -44,7 +44,7 @@ class RecipeProvider with ChangeNotifier {
       imageUrl: 'assets/pepperoni_pizza.jpg',
       description: 'Crispy pizza topped with mozzarella and pepperoni.',
       ingredients: [
-        'dough',
+        'Dough',
         'Tomato sauce',
         'Mozzarella',
         'Pepperoni',
@@ -55,28 +55,15 @@ class RecipeProvider with ChangeNotifier {
       title: 'Spaghetti',
       category: 'Dinner',
       imageUrl: 'assets/spaghetti.jpg',
-      description: 'Classic spaghetti pasta in tomato sauce.',
-      ingredients: [
-        'Spaghetti',
-        'Tomato sauce',
-        'Garlic',
-        'Olive oil',
-        'Basil',
-      ],
+      description: 'Classic spaghetti with tomato sauce.',
+      ingredients: ['Pasta', 'Tomato sauce', 'Garlic', 'Basil'],
     ),
     Recipe(
       title: 'Taco',
       category: 'Dinner',
       imageUrl: 'assets/taco.jpg',
-      description: 'Crunchy tacos with beef and fresh toppings.',
-      ingredients: [
-        'Taco shells',
-        'Ground beef',
-        'Lettuce',
-        'Tomato',
-        'Cheddar cheese',
-        'Sour cream',
-      ],
+      description: 'A crunchy taco filled with beef and veggies.',
+      ingredients: ['Tortilla', 'Ground beef', 'Lettuce', 'Cheese', 'Salsa'],
     ),
   ];
 
@@ -84,5 +71,10 @@ class RecipeProvider with ChangeNotifier {
 
   List<Recipe> getRecipesByCategory(String category) {
     return _recipes.where((recipe) => recipe.category == category).toList();
+  }
+
+  void toggleLike(Recipe recipe) {
+    recipe.isLiked = !recipe.isLiked;
+    notifyListeners();
   }
 }
