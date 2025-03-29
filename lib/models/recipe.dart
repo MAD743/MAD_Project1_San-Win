@@ -5,6 +5,8 @@ class Recipe {
   final String description;
   final List<String> ingredients;
   bool isLiked;
+  final String instructions;
+  final int calories;
 
   Recipe({
     required this.title,
@@ -13,6 +15,8 @@ class Recipe {
     required this.description,
     required this.ingredients,
     this.isLiked = false,
+    required this.instructions,
+    required this.calories,
   });
 
   Map<String, dynamic> toMap() {
@@ -32,6 +36,8 @@ class Recipe {
       imageUrl: map['imageUrl'],
       description: map['description'],
       ingredients: map['ingredients'].split(','),
+      instructions: map['instructions'],
+      calories: map['calories'],
     );
   }
 }
